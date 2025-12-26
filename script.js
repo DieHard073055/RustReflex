@@ -92,8 +92,25 @@ class RustReflex {
     }
 
     loadNextQuestion() {
+        let questionType;
+        switch(this.currentMode) {
+            case 'spot-error':
+                questionType = 'spot_error';
+                break;
+            case 'predict-output':
+                questionType = 'predict_output';
+                break;
+            case 'fix-syntax':
+                questionType = 'fix_syntax';
+                break;
+        }
+        
         const availableQuestions = this.questions.filter(q => 
-            q.question_type === this.currentMode
+            q.question_type === questionType
+        );
+        
+        const availableQuestions = this.questions.filter(q => 
+            q.question_type === questionType
         );
         
         if (availableQuestions.length === 0) {
