@@ -1,0 +1,199 @@
+[
+  {
+    "id": "rust_001",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2023-10-27T10:00:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = 5;",
+      "  let y = x;",
+      "  println!(\"{}\", x);",
+      "}"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 4,
+    "explanation": "x was moved to y. x is no longer valid. Use println!(\"{}\", y) or .clone().",
+    "choices": [
+      "Line 2: Variable shadowing is not allowed",
+      "Line 3: y cannot be created",
+      "Line 4: Use of moved value: x",
+      "Line 4: Format string requires argument"
+    ]
+  },
+  {
+    "id": "rust_002",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2023-10-27T10:05:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let mut x = 10;",
+      "  x = x + 5;",
+      "  println!(\"{}\", x);",
+      "}"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "15",
+    "choices": ["15", "10", "Error", "Panic"]
+  },
+  {
+    "id": "rust_003",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2023-10-27T10:10:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = 5;",
+      "  let y = &x;",
+      "  println!(\"{}\", *y);",
+      "}"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&",
+    "choices": ["&mut", "&", "*", "ref"]
+  },
+  {
+    "id": "rust_004",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2023-10-27T10:15:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let s1 = String::from(\"hello\");",
+      "  let s2 = s1;",
+      "  println!(\"{}\", s1);",
+      "}"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 4,
+    "explanation": "s1 was moved to s2. s1 is no longer valid. Use println!(\"{}\", s2) or .clone().",
+    "choices": [
+      "Line 2: String::from is deprecated",
+      "Line 3: s2 cannot be created",
+      "Line 4: Use of moved value: s1",
+      "Line 4: Format string requires argument"
+    ]
+  },
+  {
+    "id": "rust_005",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2023-10-27T10:20:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = 42;",
+      "  let y = &x;",
+      "  println!(\"{}\", y);",
+      "}"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "42",
+    "choices": ["42", "&42", "Error", "Panic"]
+  },
+  {
+    "id": "rust_006",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2023-10-27T10:25:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let mut s = String::from(\"hello\");",
+      "  let r = &mut s;",
+      "  r.push_str(\" world\");",
+      "}"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "&mut",
+    "choices": ["&mut", "&", "*", "ref"]
+  },
+  {
+    "id": "rust_007",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Advanced",
+    "date_added": "2023-10-27T10:30:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = Box::new(42);",
+      "  let y = x;",
+      "  println!(\"{}\", *x);",
+      "}"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 4,
+    "explanation": "x was moved to y. x is no longer valid. Use println!(\"{}\", *y) or .clone().",
+    "choices": [
+      "Line 2: Box::new is deprecated",
+      "Line 3: y cannot be created",
+      "Line 4: Use of moved value: x",
+      "Line 4: Dereference of moved value"
+    ]
+  },
+  {
+    "id": "rust_008",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Advanced",
+    "date_added": "2023-10-27T10:35:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = 5;",
+      "  let y = &x as *const i32;",
+      "  unsafe {",
+      "    println!(\"{}\", *y);",
+      "  }",
+      "}"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "5",
+    "choices": ["5", "Error", "Panic", "Undefined"]
+  },
+  {
+    "id": "rust_009",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Advanced",
+    "date_added": "2023-10-27T10:40:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = 42;",
+      "  let y = unsafe { &x as *const i32 };",
+      "  println!(\"{}\", y);",
+      "}"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "*",
+    "choices": ["&mut", "&", "*", "ref"]
+  },
+  {
+    "id": "rust_010",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2023-10-27T10:45:00Z",
+    "code_snippet": [
+      "fn main() {",
+      "  let x = 10;",
+      "  let y = x + 5;",
+      "  println!(\"{}\", y);",
+      "}"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "15",
+    "choices": ["15", "10", "Error", "Panic"]
+  }
+]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RustReflex - Master Rust with Flashcard Dojo</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#2d3748">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🦀 RustReflex</h1>
+            <div class="stats">
+                <span class="streak">🔥 Streak: <span id="streak">0</span></span>
+                <span class="score">Score: <span id="score">0</span></span>
+            </div>
+        </header>
+        
+<main>
+    <div id="mode-selector" class="mode-selector">
+        <h2>Select Training Mode</h2>
+        <div class="mode-buttons">
+            <button id="mode-a" class="mode-btn" data-mode="spot-error">
+                <div class="mode-icon">🔍</div>
+                <div class="mode-name">The Compiler</div>
+                <div class="mode-desc">Spot the Error</div>
+            </button>
+            <button id="mode-b" class="mode-btn" data-mode="predict-output">
+                <div class="mode-icon">🔮</div>
+                <div class="mode-name">The Oracle</div>
+                <div class="mode-desc">Predict Output</div>
+            </button>
+            <button id="mode-c" class="mode-btn" data-mode="fix-syntax">
+                <div class="mode-icon">🔧</div>
+                <div class="mode-name">The Mechanic</div>
+                <div class="mode-desc">Fix the Syntax</div>
+            </button>
+        </div>
+    </div>
+
+    <div id="game-area" class="game-area hidden">
+        <div class="question-card">
+            <div class="code-container">
+                <pre><code class="language-rust" id="code-snippet"></code></pre>
+            </div>
+            
+            <div id="question-content"></div>
+            
+            <div id="answer-area" class="answer-area"></div>
+            
+            <div class="controls">
+                <button id="next-question" class="btn">Next Question</button>
+                <button id="sync-data" class="btn secondary">Sync Data</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading questions...</p>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading questions...</p>
+    </div>
+</main>
+
+        <footer>
+            <div class="mastery-scores">
+                <h3>Mastery Scores</h3>
+                <div id="mastery-bars"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
