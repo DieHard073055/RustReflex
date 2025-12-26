@@ -121,7 +121,8 @@ class RustReflex {
 
     displayQuestion() {
         const codeSnippet = document.getElementById('code-snippet');
-        codeSnippet.textContent = this.currentQuestion.code_snippet.join('\n');
+        // Use innerHTML with <br> tags to preserve line breaks in display
+        codeSnippet.innerHTML = this.currentQuestion.code_snippet.join('<br>');
         Prism.highlightElement(codeSnippet);
         
         const questionContent = document.getElementById('question-content');
