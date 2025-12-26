@@ -1,199 +1,5702 @@
 [
   {
-    "id": "rust_001",
+    "id": "rust_spot_001",
     "version": 1,
-    "difficulty": "Easy",
-    "category": "Basics",
-    "date_added": "2023-10-27T10:00:00Z",
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.286Z",
     "code_snippet": [
-      "fn main() {",
-      "  let x = 5;",
-      "  let y = x;",
-      "  println!(\"{}\", x);",
-      "}"
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
     ],
     "question_type": "spot_error",
-    "correct_line_index": 4,
-    "explanation": "x was moved to y. x is no longer valid. Use println!(\"{}\", y) or .clone().",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
     "choices": [
-      "Line 2: Variable shadowing is not allowed",
-      "Line 3: y cannot be created",
-      "Line 4: Use of moved value: x",
-      "Line 4: Format string requires argument"
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
     ]
   },
   {
-    "id": "rust_002",
+    "id": "rust_spot_002",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_003",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_004",
     "version": 1,
     "difficulty": "Easy",
     "category": "Basics",
-    "date_added": "2023-10-27T10:05:00Z",
+    "date_added": "2025-12-26T19:31:18.286Z",
     "code_snippet": [
-      "fn main() {",
-      "  let mut x = 10;",
-      "  x = x + 5;",
-      "  println!(\"{}\", x);",
-      "}"
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_005",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_006",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_007",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_008",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_009",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_010",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_011",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_012",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_013",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_014",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_015",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_016",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_017",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: expected struct",
+    "choices": [
+      "Line 3: Expected struct",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: expected struct"
+    ]
+  },
+  {
+    "id": "rust_spot_018",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_019",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: expected struct",
+    "choices": [
+      "Line 3: Expected struct",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: expected struct"
+    ]
+  },
+  {
+    "id": "rust_spot_020",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_021",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_022",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_023",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_024",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_025",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_026",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_027",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_028",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_029",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_030",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_031",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_032",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_033",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_034",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_035",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_036",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_037",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_038",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_039",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_040",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_041",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_042",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_043",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_044",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_045",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_046",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_047",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_048",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_049",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_050",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: expected struct",
+    "choices": [
+      "Line 3: Expected struct",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: expected struct"
+    ]
+  },
+  {
+    "id": "rust_spot_051",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_052",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: expected struct",
+    "choices": [
+      "Line 3: Expected struct",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: expected struct"
+    ]
+  },
+  {
+    "id": "rust_spot_053",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_054",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_055",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_056",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_057",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_058",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_059",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_060",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_061",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_062",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_063",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_064",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_065",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_066",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_067",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_068",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_069",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_070",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_071",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_072",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_073",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_074",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_075",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_076",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_077",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_078",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_079",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_080",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot borrow immutable variable as mutable",
+    "choices": [
+      "Line 3: Cannot borrow immutable variable as mutable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot borrow immutable variable as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_081",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_082",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_083",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_084",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_085",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_086",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_087",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_088",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: mismatched types",
+    "choices": [
+      "Line 2: Mismatched types",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: mismatched types"
+    ]
+  },
+  {
+    "id": "rust_spot_089",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_090",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_091",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_092",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: expected identifier",
+    "choices": [
+      "Line 2: Expected identifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: expected identifier"
+    ]
+  },
+  {
+    "id": "rust_spot_093",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: expected struct",
+    "choices": [
+      "Line 3: Expected struct",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: expected struct"
+    ]
+  },
+  {
+    "id": "rust_spot_094",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 1,
+    "explanation": "Error on line 2: missing lifetime specifier",
+    "choices": [
+      "Line 2: Missing lifetime specifier",
+      "Line 3: Unexpected token",
+      "Line 1: Invalid syntax",
+      "Line 2: missing lifetime specifier"
+    ]
+  },
+  {
+    "id": "rust_spot_095",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: cannot mutate immutable variable",
+    "choices": [
+      "Line 3: Cannot mutate immutable variable",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: cannot mutate immutable variable"
+    ]
+  },
+  {
+    "id": "rust_spot_096",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: cannot borrow as mutable",
+    "choices": [
+      "Line 4: Cannot borrow as mutable",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: cannot borrow as mutable"
+    ]
+  },
+  {
+    "id": "rust_spot_097",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_spot_098",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s1); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 2,
+    "explanation": "Error on line 3: value used here after move",
+    "choices": [
+      "Line 3: Use of moved value",
+      "Line 4: Unexpected token",
+      "Line 2: Invalid syntax",
+      "Line 3: value used here after move"
+    ]
+  },
+  {
+    "id": "rust_spot_099",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: trait bound not satisfied",
+    "choices": [
+      "Line 4: Trait bound not satisfied",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: trait bound not satisfied"
+    ]
+  },
+  {
+    "id": "rust_spot_100",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "spot_error",
+    "correct_line_index": 3,
+    "explanation": "Error on line 4: borrowed value does not live long enough",
+    "choices": [
+      "Line 4: Borrowed value does not live long enough",
+      "Line 5: Unexpected token",
+      "Line 3: Invalid syntax",
+      "Line 4: borrowed value does not live long enough"
+    ]
+  },
+  {
+    "id": "rust_predict_001",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: Panic",
+      "Option C: 10",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_002",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: \"hello\"",
+      "Option C: Panic",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_003",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: \"hello\"",
+      "Option C: \"hello\"",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_004",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: None",
+      "Option C: \"hello\"",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_005",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: 5",
+      "Option C: \"hello\"",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_006",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); println!(\"{}\", s); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: true",
+      "Option C: None",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_007",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: 5",
+      "Option C: 10",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_008",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = true; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: 5",
+      "Option C: Panic",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_009",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: true",
+      "Option C: \"hello\"",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_predict_010",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: false",
+      "Option C: 10",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_011",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "10",
+    "choices": [
+      "Option A: 10",
+      "Option B: Panic",
+      "Option C: 42",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_012",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: None",
+      "Option C: None",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_predict_013",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
     ],
     "question_type": "predict_output",
     "correct_answer": 0,
-    "correct_output": "15",
-    "choices": ["15", "10", "Error", "Panic"]
-  },
-  {
-    "id": "rust_003",
-    "version": 1,
-    "difficulty": "Easy",
-    "category": "Basics",
-    "date_added": "2023-10-27T10:10:00Z",
-    "code_snippet": [
-      "fn main() {",
-      "  let x = 5;",
-      "  let y = &x;",
-      "  println!(\"{}\", *y);",
-      "}"
-    ],
-    "question_type": "fix_syntax",
-    "correct_answer": 1,
-    "correct_fix": "&",
-    "choices": ["&mut", "&", "*", "ref"]
-  },
-  {
-    "id": "rust_004",
-    "version": 1,
-    "difficulty": "Medium",
-    "category": "Ownership",
-    "date_added": "2023-10-27T10:15:00Z",
-    "code_snippet": [
-      "fn main() {",
-      "  let s1 = String::from(\"hello\");",
-      "  let s2 = s1;",
-      "  println!(\"{}\", s1);",
-      "}"
-    ],
-    "question_type": "spot_error",
-    "correct_line_index": 4,
-    "explanation": "s1 was moved to s2. s1 is no longer valid. Use println!(\"{}\", s2) or .clone().",
+    "correct_output": "true",
     "choices": [
-      "Line 2: String::from is deprecated",
-      "Line 3: s2 cannot be created",
-      "Line 4: Use of moved value: s1",
-      "Line 4: Format string requires argument"
+      "Option A: true",
+      "Option B: Error",
+      "Option C: 10",
+      "Option D: true"
     ]
   },
   {
-    "id": "rust_005",
+    "id": "rust_predict_014",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: 5",
+      "Option C: None",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_015",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: false",
+      "Option C: None",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_predict_016",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: 5",
+      "Option C: 42",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_017",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.286Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "10",
+    "choices": [
+      "Option A: 10",
+      "Option B: 5",
+      "Option C: Some(10)",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_018",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: Error",
+      "Option C: 5",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_019",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: \"hello\"",
+      "Option C: 42",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_020",
     "version": 1,
     "difficulty": "Medium",
     "category": "Ownership",
-    "date_added": "2023-10-27T10:20:00Z",
+    "date_added": "2025-12-26T19:31:18.287Z",
     "code_snippet": [
-      "fn main() {",
-      "  let x = 42;",
-      "  let y = &x;",
-      "  println!(\"{}\", y);",
-      "}"
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: 42",
+      "Option C: 42",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_021",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
     ],
     "question_type": "predict_output",
     "correct_answer": 0,
     "correct_output": "42",
-    "choices": ["42", "&42", "Error", "Panic"]
-  },
-  {
-    "id": "rust_006",
-    "version": 1,
-    "difficulty": "Medium",
-    "category": "Ownership",
-    "date_added": "2023-10-27T10:25:00Z",
-    "code_snippet": [
-      "fn main() {",
-      "  let mut s = String::from(\"hello\");",
-      "  let r = &mut s;",
-      "  r.push_str(\" world\");",
-      "}"
-    ],
-    "question_type": "fix_syntax",
-    "correct_answer": 0,
-    "correct_fix": "&mut",
-    "choices": ["&mut", "&", "*", "ref"]
-  },
-  {
-    "id": "rust_007",
-    "version": 1,
-    "difficulty": "Hard",
-    "category": "Advanced",
-    "date_added": "2023-10-27T10:30:00Z",
-    "code_snippet": [
-      "fn main() {",
-      "  let x = Box::new(42);",
-      "  let y = x;",
-      "  println!(\"{}\", *x);",
-      "}"
-    ],
-    "question_type": "spot_error",
-    "correct_line_index": 4,
-    "explanation": "x was moved to y. x is no longer valid. Use println!(\"{}\", *y) or .clone().",
     "choices": [
-      "Line 2: Box::new is deprecated",
-      "Line 3: y cannot be created",
-      "Line 4: Use of moved value: x",
-      "Line 4: Dereference of moved value"
+      "Option A: 42",
+      "Option B: Some(10)",
+      "Option C: \"hello\"",
+      "Option D: Error"
     ]
   },
   {
-    "id": "rust_008",
+    "id": "rust_predict_022",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: Some(10)",
+      "Option C: 42",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_023",
     "version": 1,
     "difficulty": "Hard",
-    "category": "Advanced",
-    "date_added": "2023-10-27T10:35:00Z",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
     "code_snippet": [
-      "fn main() {",
-      "  let x = 5;",
-      "  let y = &x as *const i32;",
-      "  unsafe {",
-      "    println!(\"{}\", *y);",
-      "  }",
-      "}"
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: Some(10)",
+      "Option C: true",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_024",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: false",
+      "Option C: 42",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_025",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: Error",
+      "Option C: \"hello\"",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_026",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: false",
+      "Option C: Error",
+      "Option D: \"hello\""
+    ]
+  },
+  {
+    "id": "rust_predict_027",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = true; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "10",
+    "choices": [
+      "Option A: 10",
+      "Option B: None",
+      "Option C: 42",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_028",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: 10",
+      "Option C: Panic",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_029",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
     ],
     "question_type": "predict_output",
     "correct_answer": 0,
-    "correct_output": "5",
-    "choices": ["5", "Error", "Panic", "Undefined"]
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: 10",
+      "Option C: 10",
+      "Option D: None"
+    ]
   },
   {
-    "id": "rust_009",
+    "id": "rust_predict_030",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = true; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: \"hello\"",
+      "Option C: Some(10)",
+      "Option D: \"hello\""
+    ]
+  },
+  {
+    "id": "rust_predict_031",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: false",
+      "Option C: Some(10)",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_032",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: Some(10)",
+      "Option C: false",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_033",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: 10",
+      "Option C: false",
+      "Option D: \"hello\""
+    ]
+  },
+  {
+    "id": "rust_predict_034",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: Panic",
+      "Option C: Some(10)",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_035",
     "version": 1,
     "difficulty": "Hard",
-    "category": "Advanced",
-    "date_added": "2023-10-27T10:40:00Z",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
     "code_snippet": [
-      "fn main() {",
-      "  let x = 42;",
-      "  let y = unsafe { &x as *const i32 };",
-      "  println!(\"{}\", y);",
-      "}"
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: \"hello\"",
+      "Option C: true",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_036",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: Panic",
+      "Option C: Some(10)",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_037",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: 10",
+      "Option C: true",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_038",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: None",
+      "Option C: false",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_039",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: Some(10)",
+      "Option C: Panic",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_040",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: None",
+      "Option C: 5",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_041",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); println!(\"{}\", s); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: 42",
+      "Option C: 10",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_042",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: 10",
+      "Option C: Panic",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_043",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: \"hello\"",
+      "Option C: Error",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_044",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: None",
+      "Option C: Some(10)",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_045",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); println!(\"{}\", s); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: \"hello\"",
+      "Option C: None",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_046",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: Some(10)",
+      "Option C: 42",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_047",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: None",
+      "Option C: false",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_048",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: false",
+      "Option C: \"hello\"",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_049",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: Panic",
+      "Option C: Panic",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_050",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); println!(\"{}\", s); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "10",
+    "choices": [
+      "Option A: 10",
+      "Option B: Panic",
+      "Option C: \"hello\"",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_051",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: Some(10)",
+      "Option C: Some(10)",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_052",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: Error",
+      "Option C: Panic",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_053",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: 5",
+      "Option C: 10",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_054",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: true",
+      "Option C: Panic",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_055",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: true",
+      "Option C: 10",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_056",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: None",
+      "Option C: 10",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_057",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: true",
+      "Option C: Some(10)",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_058",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: 10",
+      "Option C: None",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_059",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: 10",
+      "Option C: false",
+      "Option D: \"hello\""
+    ]
+  },
+  {
+    "id": "rust_predict_060",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: 5",
+      "Option C: false",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_061",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = true; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: None",
+      "Option C: 10",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_062",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: false",
+      "Option C: 10",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_063",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: 42",
+      "Option C: \"hello\"",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_064",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: None",
+      "Option C: Panic",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_predict_065",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: 10",
+      "Option C: 10",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_066",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: Panic",
+      "Option C: 42",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_067",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: Panic",
+      "Option C: Panic",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_068",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: \"hello\"",
+      "Option C: Some(10)",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_069",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: Error",
+      "Option C: Panic",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_070",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); println!(\"{}\", s); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: Panic",
+      "Option C: 42",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_071",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = true; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: Panic",
+      "Option C: Some(10)",
+      "Option D: Some(10)"
+    ]
+  },
+  {
+    "id": "rust_predict_072",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: true",
+      "Option C: Some(10)",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_073",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: 10",
+      "Option C: Error",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_074",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: \"hello\"",
+      "Option C: Error",
+      "Option D: 42"
+    ]
+  },
+  {
+    "id": "rust_predict_075",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: Error",
+      "Option C: Panic",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_076",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: \"hello\"",
+      "Option C: 10",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_077",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: 42",
+      "Option C: false",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_078",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: 42",
+      "Option C: Panic",
+      "Option D: \"hello\""
+    ]
+  },
+  {
+    "id": "rust_predict_079",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Error",
+    "choices": [
+      "Option A: Error",
+      "Option B: Some(10)",
+      "Option C: 42",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_080",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: Error",
+      "Option C: \"hello\"",
+      "Option D: \"hello\""
+    ]
+  },
+  {
+    "id": "rust_predict_081",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: true",
+      "Option C: None",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_082",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: Error",
+      "Option C: 10",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_predict_083",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: true",
+      "Option C: 42",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_084",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "10",
+    "choices": [
+      "Option A: 10",
+      "Option B: Panic",
+      "Option C: false",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_085",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: None",
+      "Option C: 10",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_086",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "Some(10)",
+    "choices": [
+      "Option A: Some(10)",
+      "Option B: 5",
+      "Option C: Some(10)",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_087",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "Panic",
+    "choices": [
+      "Option A: Panic",
+      "Option B: 5",
+      "Option C: 10",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_088",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "42",
+    "choices": [
+      "Option A: 42",
+      "Option B: Panic",
+      "Option C: true",
+      "Option D: 10"
+    ]
+  },
+  {
+    "id": "rust_predict_089",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = None; println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: 42",
+      "Option C: true",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_090",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: true",
+      "Option C: 42",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_091",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 3; let y = x.pow(2); println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: Some(10)",
+      "Option C: \"hello\"",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_092",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: true",
+      "Option C: 42",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_predict_093",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = Some(10); println!(\"{:?}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: false",
+      "Option C: Panic",
+      "Option D: false"
+    ]
+  },
+  {
+    "id": "rust_predict_094",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: true",
+      "Option C: Some(10)",
+      "Option D: None"
+    ]
+  },
+  {
+    "id": "rust_predict_095",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "5",
+    "choices": [
+      "Option A: 5",
+      "Option B: None",
+      "Option C: Error",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_096",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = x * 2; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 2,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: 42",
+      "Option C: 10",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_097",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = x + 5; println!(\"{}\", y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "\"hello\"",
+    "choices": [
+      "Option A: \"hello\"",
+      "Option B: None",
+      "Option C: None",
+      "Option D: Panic"
+    ]
+  },
+  {
+    "id": "rust_predict_098",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; println!(\"{}\", x); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 0,
+    "correct_output": "None",
+    "choices": [
+      "Option A: None",
+      "Option B: 10",
+      "Option C: Panic",
+      "Option D: true"
+    ]
+  },
+  {
+    "id": "rust_predict_099",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"test\"); let r = &s; println!(\"{}\", r); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 3,
+    "correct_output": "false",
+    "choices": [
+      "Option A: false",
+      "Option B: 10",
+      "Option C: 42",
+      "Option D: 5"
+    ]
+  },
+  {
+    "id": "rust_predict_100",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "predict_output",
+    "correct_answer": 1,
+    "correct_output": "true",
+    "choices": [
+      "Option A: true",
+      "Option B: 10",
+      "Option C: false",
+      "Option D: Error"
+    ]
+  },
+  {
+    "id": "rust_fix_001",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
     ],
     "question_type": "fix_syntax",
     "correct_answer": 2,
     "correct_fix": "*",
-    "choices": ["&mut", "&", "*", "ref"]
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
   },
   {
-    "id": "rust_010",
+    "id": "rust_fix_002",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_003",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_004",
     "version": 1,
     "difficulty": "Easy",
     "category": "Basics",
-    "date_added": "2023-10-27T10:45:00Z",
+    "date_added": "2025-12-26T19:31:18.287Z",
     "code_snippet": [
-      "fn main() {",
-      "  let x = 10;",
-      "  let y = x + 5;",
-      "  println!(\"{}\", y);",
-      "}"
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
     ],
-    "question_type": "predict_output",
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_005",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_006",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_007",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_008",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
     "correct_answer": 0,
-    "correct_output": "15",
-    "choices": ["15", "10", "Error", "Panic"]
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_009",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_010",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_011",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_012",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_013",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_014",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_015",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_016",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_017",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_018",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_019",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_020",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_021",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_022",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_023",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_024",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_025",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_026",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_027",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_028",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_029",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_030",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_031",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_032",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_033",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_034",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_035",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_036",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_037",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_038",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_039",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "into()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_040",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "into()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_041",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_042",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_043",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "into()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_044",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_045",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_046",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_047",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_048",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_049",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_050",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_051",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_052",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_053",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_054",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_055",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_056",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_057",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_058",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_059",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_060",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_061",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "into()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_062",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_063",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_064",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_065",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_066",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_067",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "into()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_068",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Lifetimes",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_069",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_070",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_071",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "ref",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_072",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_073",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_074",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_075",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_076",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_077",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_078",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s1 = String::from(\"test\"); let s2 = s1; println!(\"{}\", s2); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_079",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_080",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_081",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_082",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_083",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Error Handling",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_084",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Traits",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "as_str()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_085",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_086",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_087",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_088",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_089",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "into()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_090",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_091",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "clone()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_092",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let s = String::from(\"hello\"); let r = &s; drop(s); println!(\"{}\", r); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_093",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Structs",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_094",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Concurrency",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_095",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Borrowing",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_096",
+    "version": 1,
+    "difficulty": "Hard",
+    "category": "Generics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", *y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 3,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_097",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 42; let y = &x as *const i32; unsafe { println!(\"{}\", *y); } }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "&",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_098",
+    "version": 1,
+    "difficulty": "Easy",
+    "category": "Basics",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let mut s = String::from(\"hello\"); let r = &s; r.push_str(\" world\"); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 2,
+    "correct_fix": "&mut",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_099",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Enums",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 10; let y = &x; let z = &mut x; println!(\"{}\", x); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 0,
+    "correct_fix": "*",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
+  },
+  {
+    "id": "rust_fix_100",
+    "version": 1,
+    "difficulty": "Medium",
+    "category": "Ownership",
+    "date_added": "2025-12-26T19:31:18.287Z",
+    "code_snippet": [
+      "fn main() { let x = 5; let y = &x; println!(\"{}\", y); }"
+    ],
+    "question_type": "fix_syntax",
+    "correct_answer": 1,
+    "correct_fix": "to_string()",
+    "choices": [
+      "&mut",
+      "&",
+      "*",
+      "ref"
+    ]
   }
 ]
