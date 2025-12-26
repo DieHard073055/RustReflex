@@ -109,10 +109,6 @@ class RustReflex {
             q.question_type === questionType
         );
         
-        const availableQuestions = this.questions.filter(q => 
-            q.question_type === questionType
-        );
-        
         if (availableQuestions.length === 0) {
             this.showNoQuestions();
             return;
